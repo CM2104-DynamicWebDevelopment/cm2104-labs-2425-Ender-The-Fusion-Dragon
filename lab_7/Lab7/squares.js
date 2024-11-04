@@ -10,6 +10,7 @@ $(function(){
 		// using $("div")
 		if ($(this).hasClass("red")) {
 			$(this).addClass("blue").removeClass("red");
+			$(".blue").animate({width: "200px"}, 1000);
 		}
 		else if ($(this).hasClass("blue")) {
 			$(this).addClass("green").removeClass("blue");
