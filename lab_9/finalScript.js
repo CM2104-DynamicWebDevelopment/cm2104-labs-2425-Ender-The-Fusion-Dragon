@@ -22,7 +22,8 @@ function addResultTitles(jsondata){
         var title = jsondata.Search[i].Title;
         var poster = jsondata.Search[i].Poster;
         var releaseYear = jsondata.Search[i].Year;
-        htmlstring += "<li>" + title + "<p>" + releaseYear + "</p>" + "<img src = '" + poster + "'/>" + "</li>";
+        var genre = jsondata.Search[i].Type;
+        htmlstring += "<li>" + title + "<p>" + releaseYear + "</p>" + "<p>" + genre + "</p>" + "<img src = '" + poster + "'/>" + "</li>";
     }
 
     $("#results").html(htmlstring);
