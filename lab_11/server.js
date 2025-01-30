@@ -21,4 +21,22 @@ app.get('/add', function(req, res){
     res.send("X + Y = " + (x + y));
 });
 
+app.get('/calc', function(req, res){
+    var x = parseInt(req.query.x);
+    var y = parseInt(req.query.y);
+    var op = req.query.op;
+
+    if(op == "add"){
+        res.send("X + Y = " + (x + y)); 
+    }else if(op == "minus"){
+        res.send("X - Y = " + (x - y));
+    }else if(op == "divide"){
+        res.send("X / Y = " + (x / y));
+    }else if(op == "multiply"){
+        res.send("X * Y = " + (x * y));
+    }else{
+        res.send("Error!\nPlease input either 'add', 'minus', 'divide' or 'multiply'")
+    }
+});
+
 app.listen(8080);
