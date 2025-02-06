@@ -31,7 +31,7 @@ async function getTracks(searchterm, res) {
             console.log(HTMLResponse);
         }
 
-        res.send(JSON.stringify(data.body));
+        res.send(HTMLResponse);
     }, function(err){
         console.error(err);
     });
