@@ -14,6 +14,23 @@ app.get('/', function(req, res){
 
 async function getTracks(searchterm, res) {
     spotifyApi.searchTracks(searchterm).then(function(data){
+        var tracks = data.body.tracks.items;
+        var HTMLResponse = "";
+
+        for(var i = 0; i < tracks.length; i++){
+            var track = tracks[i];
+            console.log(track.name);
+
+            HTMLResponse = HTMLResponse +
+            "<div>" +
+                "<h2>" + track.name + "</h2>" +
+                "<h4>" + track.artist[0].name + "</h4>" +
+                "<img src = '" + track.album.images[0].url + "'>" +
+                "<href = '" + track.external_urls.spotify + "'> Track details </a>" +
+            "</div>";
+            console.log(HTMLResponse);
+        }
+
         res.send(JSON.stringify(data.body));
     }, function(err){
         console.error(err);
