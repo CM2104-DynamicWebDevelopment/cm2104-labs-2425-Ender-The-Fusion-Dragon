@@ -32,7 +32,7 @@ app.get('/all', function(req, res){
             output += "<p>" + result[i].quote + "</p>";
             output += "</div>"
         }
-
+        console.log(output);
         res.send(output);
     });
 });
