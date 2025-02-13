@@ -27,11 +27,11 @@ app.get('/all', function(req, res){
         var output = "<h1>All the quotes</h1>";
 
         for(var i = 0; i < result.length; i++){
+            console.log(output);
             output += "<div>";
             output += "<h3>" + result[i].name + "</h3>";
             output += "<p>" + result[i].quote + "</p>";
             output += "</div>"
-            console.log(output);
         }
         res.send(output);
     });
