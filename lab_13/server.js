@@ -1,7 +1,7 @@
 const MongoClient = require('mongodb-legacy').MongoClient;
 const url = 'mongodb://127.0.0.1:27017';
 const client = new MongoClient(url);
-const dbname = 'star_wars-quotes';
+const dbname = 'star_wars_quotes';
 
 const express = require('express');
 const app = express();
