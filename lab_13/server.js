@@ -31,8 +31,8 @@ app.get('/all', function(req, res){
             output += "<h3>" + result[i].name + "</h3>";
             output += "<p>" + result[i].quote + "</p>";
             output += "</div>"
+            console.log(output);
         }
-        console.log(output);
         res.send(output);
     });
 });
