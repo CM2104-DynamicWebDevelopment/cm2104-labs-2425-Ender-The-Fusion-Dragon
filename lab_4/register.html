@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+
+    <head>
+        <meta charset = "utf-8">
+        <title>Registration Form</title>
+
+        <script>
+
+            function testResult(form){
+                //Simple script to pop-up form values after submission
+                //Grab form elemnt values and store them as variables
+                var userName = form.username.value;
+                var email = form.email.value;
+                var breed = form.breed.value;
+                var homepage = form.homepage.value;
+                var dob = form.dob.value;
+                var about = form.about.value;
+
+                //Alert message that lists everything the user inputted into the forms
+                alert("You registered: " + userName + ", " + email + ", " + breed + ", " + homepage + ", " + dob + ", " + about);
+            }
+        </script>
+    </head>
+
+    <body>
+        <h1>MoggyBook!</h1>
+
+        <form>
+            <table border = "0" cellspacing = "5" cellpadding = "5">
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "username">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "email">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "breed">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "homepage">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "dob">
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <input type = "textarea" name = "about">
+                    </td>
+                </tr>
+            </table>
+
+            <input type = "submit" name = "submit" value = "submit" onclick = "testResult(this.form)">
+        </form>
+    </body>
+
+</html>
