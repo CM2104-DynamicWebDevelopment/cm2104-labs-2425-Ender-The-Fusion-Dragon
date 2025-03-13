@@ -7,4 +7,9 @@ $('#form').submit(function(){
         $('#input').val("");
     }
     return false;
+});
+
+socket.on('chat message', function(msg){
+    $('#messages').append("<li>" + msg + "</li>");
+    window.scrollTo(0, document.body.scrollHeight);
 })
